@@ -1,5 +1,5 @@
 # lambdaDemo_c-14
-A showcase of the utility lambdas bring to the table
+A showcase of the utility c++14 brings to the table with its improved lambdas
 
 The demonstration defines two structs Person and Dog. Both of these structs have a member string name. The person struct contains an additional member int age. Both structs also have a constructor.
 
