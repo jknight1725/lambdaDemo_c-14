@@ -3,7 +3,7 @@ A showcase of the utility c++14 brings to the table with its improved lambdas
 
 The demonstration defines two structs Person and Dog. Both of these structs have a member string name. The person struct contains an additional member int age. Both structs also have a constructor.
 
-The program intializes three person objects and one dog object. The person objects are then sotred in a vector named roster. An anonymous function is then stored in the variable printName. This function will take any type and attempt to print that objects name data. This is akin to ducktyping in c++. Instead of overloading the  << operator or defining a printName function for each structure, we can just use a lambda once.
+The program intializes three person objects and one dog object. The person objects are then stored in a vector named roster. An anonymous function is then stored in the variable printName. This function will take any type and attempt to print that objects name data. This is essentially allowing ducktyping in c++ without the use of templates. Instead of overloading the  << operator or defining a printName function for each structure, we can just use a lambda once.
 
 The program calls the printName lamda on the roster and on the Dog rover. This demonstrates the ability of our anonymous function to take any type as a parameter.
 
