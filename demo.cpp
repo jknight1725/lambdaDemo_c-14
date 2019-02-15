@@ -15,13 +15,10 @@ int main()
 		Dog(std::string n) : name(n) {}
 	}; 
 
-	Person doug("Doug", 42);
-	Person linda("Linda", 65);
-	Person todd("Todd", 27);
-	std::vector<Person> roster = {doug, linda, todd};
+	std::vector<Person> roster { {"Linda", 65}, {"Todd", 27}, {"Doug", 42} };
 	
 	auto printName = [](auto& x){std::cout << x.name << std::endl;};
-	for(auto p : roster) { printName(p); }
+	for(const auto& p : roster) { printName(p); }
 	
 	Dog rover("Rover the Dog");
 	printName(rover);
