@@ -18,14 +18,14 @@ int main()
 	std::vector<Person> roster { {"Linda", 65}, {"Todd", 27}, {"Doug", 42} };
 	
 	auto printName = [](auto& x){std::cout << x.name << std::endl;};
-	for(const auto& p : roster) { printName(p); }
+	for(auto& p : roster) { printName(p); }
 	
 	Dog rover("Rover the Dog");
 	printName(rover);
 
 	auto byAge = [](auto& lhs, auto& rhs) {return lhs.age < rhs.age;};
 	std::sort(roster.begin(),roster.end(), byAge);
-	for(auto p : roster) { printName(p); }
+	for(auto& p : roster) { printName(p); }
 
 return 0;
 }
