@@ -8,22 +8,23 @@ int main()
 		std::string name;
 		int age;
 		Person(std::string n, int a) : name(n),age(a) {}
-	}; Person doug("Doug", 42);
-	   Person linda("Linda", 65);
-	   Person todd("Todd", 27);
-
-	std::vector<Person> roster = {doug, linda, todd};
-
+	}; 
+	
 	struct Dog {
 		std::string name;
 		Dog(std::string n) : name(n) {}
-	}; Dog rover("Rover");
+	}; 
 
+	Person doug("Doug", 42);
+	Person linda("Linda", 65);
+	Person todd("Todd", 27);
+	std::vector<Person> roster = {doug, linda, todd};
+	
 	auto printName = [](auto& x){std::cout << x.name << std::endl;};
-
 	for(auto p : roster) { printName(p); }
+	
+	Dog rover("Rover the Dog");
 	printName(rover);
-	std::cout << std::endl;
 
 	auto byAge = [](auto& lhs, auto& rhs) {return lhs.age < rhs.age;};
 	std::sort(roster.begin(),roster.end(), byAge);
