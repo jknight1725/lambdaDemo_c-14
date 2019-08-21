@@ -1,7 +1,11 @@
 # lambdaDemo_c-14
 A showcase of the utility c++14 brings to the table with its improved lambdas
+demo.cpp
+demo2.cpp
+compile with -std=c++14
 
-The demonstration defines two structs Person and Dog. Both of these structs have a member string name. The person struct contains an additional member int age. Both structs also have a constructor.
+demo.cpp
+The first demonstration defines two structs Person and Dog. Both of these structs have a member string name. The person struct contains an additional member int age. Both structs also have a constructor.
 
 The program intializes three person objects and one dog object. The person objects are then stored in a vector named roster. An anonymous function is then stored in the variable printName. This function will take any type and attempt to print that objects name data. This is essentially allowing ducktyping in c++ without the use of templates. Instead of overloading the  << operator or defining a printName function for each structure, we can just use a lambda once.
 
@@ -11,3 +15,6 @@ A further demonstration of lambda functionality is then shown by defining a lamb
 The vector is then printed again with the printName lambda but this time the roster is sorted by age.
 
 The lambda allows us to avoid overloading an operator for each of these structs. It also gives us the ability to create a sorting criteria on the fly without having to hardcode it into the structure. We could just as easily define a lambda that sorts the roster by the name field.
+
+demo2.cpp
+*Documentation in progress*
