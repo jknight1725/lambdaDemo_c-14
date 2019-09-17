@@ -27,5 +27,8 @@ int main()
 	std::sort(roster.begin(),roster.end(), byAge);
 	for(auto& p : roster) { printName(p); }
 
+	// The possibilities are endless. We could just as easily have made a difference of age lambda 
+	// and that lambda could compare rover the dogs age to a humans age
+
 return 0;
 }
