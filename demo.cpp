@@ -20,7 +20,7 @@ int main()
 	auto printName = [](auto& x){std::cout << x.name << std::endl;};
 	for(auto& p : roster) { printName(p); }
 	
-	Dog rover("Rover the Dog");  // rvalues are cool
+	Dog rover("Rover the Dog");
 	printName(rover);
 
 	auto byAge = [](auto& lhs, auto& rhs) {return lhs.age < rhs.age;};
