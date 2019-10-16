@@ -23,7 +23,7 @@ int main()
 	Dog rover("Rover the Dog");
 	printName(rover);
 
-	auto byAge = [](auto& lhs, auto& rhs) {return lhs.age < rhs.age;};
+	auto byAge = [](auto lhs, auto rhs) {return lhs.age < rhs.age;};
 	std::sort(roster.begin(),roster.end(), byAge);
 	for(auto& p : roster) { printName(p); }
 
