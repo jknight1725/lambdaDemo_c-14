@@ -13,7 +13,7 @@ int main() {
 		if(fitsConstraint(x))
 			intList.push_back(x);
 	}
-	auto avg { std::accumulate(intList.begin(),intList.end(),0) / intList.size() };
+	auto avg { std::accumulate(intList.begin(), intList.end(), 0) / intList.size() };
 	auto above_avg { std::count_if(intList.begin(), intList.end(), above(avg)) };
 	std::cout << above_avg << " scores above the average\n";
 return 0;
