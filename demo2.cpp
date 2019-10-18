@@ -8,9 +8,9 @@ int main() {
 	std::vector<int> intList {};
 	int x {0};
 	std::cout << "Enter integers, enter -1 when finished\n";
-	auto fitsConstraint = [](auto num){ return (num > 0 && num < 100); };
+	auto fits_constraint = [](auto num){ return (num > 0 && num < 100); };
 	while( std::cin >> x && x != -1 ) {
-		if(fitsConstraint(x))
+		if(fits_constraint(x))
 			intList.push_back(x);
 	}
 	auto avg { std::accumulate(intList.begin(), intList.end(), 0) / intList.size() };
