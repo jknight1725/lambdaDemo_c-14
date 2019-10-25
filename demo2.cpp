@@ -1,4 +1,4 @@
-#COMPILE WITH CPP17
+//#COMPILE WITH CPP17
 #include <iostream>
 #include <vector>
 #include <numeric>
