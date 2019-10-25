@@ -1,20 +1,20 @@
 #include <iostream>
 #include <vector>
 #include <numeric>
-auto above(int avg) {
-    return [avg](int x){ return x > avg; };
+auto test_score_above(double avg) {
+    return [avg](auto score){ return score > avg; };
 }
 int main() {
-	std::vector<int> intList {};
-	int x {0};
-	std::cout << "Enter integers, enter -1 when finished\n";
-	auto fits_constraint = [](auto num){ return (num > 0 && num < 100); };
-	while( std::cin >> x && x != -1 ) {
-		if(fits_constraint(x))
-			intList.push_back(x);
-	}
-	auto avg { std::accumulate(intList.begin(), intList.end(), 0) / intList.size() };
-	auto above_avg { std::count_if(intList.begin(), intList.end(), above(avg)) };
-	std::cout << above_avg << " scores above the average\n";
-return 0;
+    std::vector<double> test_scores {};
+    double test_score {0};
+    std::cout << "Enter test scores, enter -1 when finished\n";
+    auto fits_constraint = [](double score){ return (score > 0 && score < 100); };
+    while( std::cin >> test_score && test_score != -1 ) {
+        if(fits_constraint(test_score))
+            test_scores.push_back(test_score);
+    }
+    auto avg { std::reduce(test_scores.begin(), test_scores.end()) / test_scores.size() };
+    auto test_scores_above_avg { std::count_if(test_scores.begin(), test_scores.end(), test_score_above(avg)) };
+    std::cout << test_scores_above_avg << " scores above the average\n";
+    return 0;
 }
