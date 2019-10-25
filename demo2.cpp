@@ -9,7 +9,7 @@ int main() {
     std::vector<double> test_scores {};
     double test_score {0};
     std::cout << "Enter test scores, enter -1 when finished\n";
-    auto fits_constraint = [](double score){ return (score >= 0 && score <= 100); };
+    auto fits_constraint = [](auto score){ return (score >= 0 && score <= 100); };
     while( std::cin >> test_score && test_score != -1 ) {
         if(fits_constraint(test_score))
             test_scores.push_back(test_score);
